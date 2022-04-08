@@ -1,0 +1,77 @@
+{
+  "root": true,
+  "env": {
+    "node": true,
+    "browser": true,
+    "commonjs": true
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "eslint:recommended",
+    "standard",
+    "standard-jsx",
+    "react-app",
+    "react-app/jest",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "@typescript-eslint/default-param-last": "off",
+    "@typescript-eslint/member-delimiter-style": ["error", {
+      "multiline": {
+        "delimiter": "none"
+      },
+      "singleline": {
+        "delimiter": "semi"
+      },
+      "multilineDetection": "brackets"
+    }],
+    "@typescript-eslint/naming-convention": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "args": "none",
+        "ignoreRestSiblings": true
+      }
+    ],
+    "comma-dangle": "off",
+    "@typescript-eslint/comma-dangle": [
+      "error",
+      "never"
+    ],
+    "semi": "off",
+    "@typescript-eslint/semi": [
+      "error",
+      "never"
+    ],
+    "react/jsx-tag-spacing":["error", {
+      "closingSlash": "never",
+      "beforeSelfClosing": "never",
+      "afterOpening": "never",
+      "beforeClosing": "never"
+    }],
+    "space-before-function-paren": ["error", {
+      "anonymous": "always",
+      "named": "never",
+      "asyncArrow": "always"
+    }],
+    "no-return-await": "error",
+    "jsx-quotes": [
+      "error",
+      "prefer-double"
+    ]
+  }
+}

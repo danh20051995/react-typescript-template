@@ -1,0 +1,13 @@
+.routerView {
+  flex: 1 1 auto;
+  display: flex;
+  overflow: hidden;
+  max-height: calc(100vh - 70px);
+
+  > *:first-child {
+    overflow: auto;
+    display: flex;
+    flex: 1 1 auto;
+    padding: 1em;
+  }
+}
